@@ -7,9 +7,9 @@ if (themeColorInitial) {
   body.dataset.theme = themeColorInitial;
 }
 if (themeColorInitial === "light") {
-  document.querySelector(".switch").checked = false;
+  document.querySelector("input[type=checkbox]").checked = true;
 } else {
-  document.querySelector(".switch").checked = true;
+  document.querySelector("input[type=checkbox]").checked = false;
 }
 document.querySelector(".switch").addEventListener("click", () => {
   if (event.target.checked) {
