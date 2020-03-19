@@ -1,0 +1,27 @@
+@mixin dark-theme {
+  header {
+    background-color: black;
+    color: white;
+    button {
+      background-color: gray;
+    }
+  }
+  main {
+    background-color: gray;
+    color: white;
+  }
+}
+
+@mixin light-theme {
+  header {
+    background-color: white;
+    color: rgb(46, 46, 46);
+    button {
+      background-color: gray;
+    }
+  }
+  main {
+    background-color: pink;
+    color: rgb(46, 46, 46);
+  }
+}
