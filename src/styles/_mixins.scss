@@ -25,3 +25,13 @@
     color: rgb(46, 46, 46);
   }
 }
+
+@mixin small {
+  font-size: 12px;
+}
+@mixin medium {
+  font-size: 16px;
+}
+@mixin large {
+  font-size: 20px;
+}

@@ -4,13 +4,12 @@
   margin: 0;
   padding: 0;
 }
+
 html,
 body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  margin: 0;
-  padding: 0;
 }
 body,
 body * {
@@ -19,10 +18,7 @@ body * {
   font-family: $font-primary;
   border: none;
 }
-button {
-  font-weight: bold;
-  font-size: 1rem;
-}
+
 body {
   display: flex;
   flex-direction: column;
@@ -67,7 +63,7 @@ main section p {
 img {
   width: 25px;
 }
-label {
+.switch {
   display: flex;
   width: 70px;
   background-color: rgb(59, 59, 59);
@@ -76,13 +72,12 @@ label {
   position: relative;
 }
 label * {
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
 }
 label .icon-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  transition: all 1s ease-in;
 }
 
 .switch input {
@@ -102,4 +97,33 @@ span {
 
 .switch input[type="checkbox"]:checked ~ span {
   transform: translateX(33px);
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+.font-container {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+[data-size="small"] {
+  @include small;
+}
+[data-size="medium"] {
+  @include medium;
+}
+[data-size="large"] {
+  @include large;
+}
+
+form label:nth-child(1) {
+  font-size: 12px;
+}
+form label:nth-child(2) {
+  font-size: 16px;
+}
+form label:nth-child(3) {
+  font-size: 20px;
 }

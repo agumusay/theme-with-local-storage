@@ -2,7 +2,15 @@ import "../styles/main.scss";
 import "regenerator-runtime/runtime";
 let body = document.body;
 let themeColorInitial = localStorage.getItem("theme");
-console.log(themeColorInitial);
+let fontSizeInitial = localStorage.getItem("font-size");
+let main = document.querySelector("main");
+console.log(fontSizeInitial);
+
+if (fontSizeInitial) {
+  main.dataset.size = fontSizeInitial;
+  document.querySelector(`#${fontSizeInitial}`).checked = true;
+}
+
 if (themeColorInitial) {
   body.dataset.theme = themeColorInitial;
 }
@@ -13,10 +21,17 @@ if (themeColorInitial === "light") {
 }
 document.querySelector(".switch").addEventListener("click", () => {
   if (event.target.checked) {
-    document.body.dataset.theme = "light";
+    body.dataset.theme = "light";
   } else {
-    document.body.dataset.theme = "dark";
+    body.dataset.theme = "dark";
   }
-  let themeValue = document.body.dataset.theme;
+  let themeValue = body.dataset.theme;
   localStorage.setItem("theme", themeValue);
+});
+
+document.querySelector("form").addEventListener("change", event => {
+  main.dataset.size = event.currentTarget.elements.font.value;
+
+  let fontSize = main.dataset.size;
+  localStorage.setItem("font-size", fontSize);
 });

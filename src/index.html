@@ -11,23 +11,37 @@
     <header>
       <h2>Site Logo</h2>
       <div class="toggle-container">
+        <form class="font-container">
+          <label for="small">A<input type="radio" name="font" id="small" value="small"/></label>
+          <label for="medium"
+            >A<input type="radio" name="font" id="medium" value="medium" checked
+          /></label>
+          <label for="large">A<input type="radio" name="font" id="large" value="large"/></label>
+        </form>
         <label class="switch">
           <input type="checkbox" />
-          <div class="icon-container"><img src="./img/sunny.png" alt="" /><img src="./img/moon.png" alt="" /></div>
+          <div class="icon-container">
+            <img src="./img/sunny.png" alt="" /><img src="./img/moon.png" alt="" />
+          </div>
           <span class="slider"></span>
         </label>
       </div>
     </header>
-    <main class="container">
+    <main class="container" data-size="medium">
       <section class="text">
         <h1>
           Refactoring
         </h1>
-        <p>Refactoring is a disciplined technique for restructuring an existing body of code, altering its internal structure without changing its external behavior.</p>
         <p>
-          Its heart is a series of small behavior preserving transformations. Each transformation (called a "refactoring") does little, but a sequence of these transformations can produce a
-          significant restructuring. Since each refactoring is small, it's less likely to go wrong. The system is kept fully working after each refactoring, reducing the chances that a system can get
-          seriously broken during the restructuring.
+          Refactoring is a disciplined technique for restructuring an existing body of code,
+          altering its internal structure without changing its external behavior.
+        </p>
+        <p>
+          Its heart is a series of small behavior preserving transformations. Each transformation
+          (called a "refactoring") does little, but a sequence of these transformations can produce
+          a significant restructuring. Since each refactoring is small, it's less likely to go
+          wrong. The system is kept fully working after each refactoring, reducing the chances that
+          a system can get seriously broken during the restructuring.
         </p>
         <p>
           -- Martin Fowler
